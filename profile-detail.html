@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!--=============== FAVICON ===============-->
+      <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+      <!--=============== REMIXICONS ===============-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+
+      <!--=============== SWIPER CSS ===============-->
+      <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="assets/css/styles.css">
+
+      <title>King Marcel Library</title>
+   </head>
+   <body>
+      <!--==================== HEADER ====================-->
+      <header class="header" id="header">
+         <nav class="nav navcontainer">
+            <a href="#" class="nav__logo">
+               <i class="ri-book-shelf-line"></i> King Marcel Library
+            </a>
+
+            <div class="nav__actions">
+               <!-- Search button -->
+               <i class="ri-search-line search-button" id="search-button"></i>
+
+               <!-- Login button -->
+               <i class="ri-user-line login-button" id="login-button"></i>
+
+               <!-- Keranjang button -->
+               <i class="ri-shopping-cart-2-line cart-button" id="cart-button"></i>
+            </div>
+         </nav>
+      </header>
+
+      <!--==================== SEARCH ====================-->
+      <div class="search" id="search-content">
+         <form action="" class="search__form">
+            <i class="ri-search-line search__icon"></i>
+            <input type="search" placeholder="What are you looking for?" class="search__input">
+         </form>
+
+         <i class="ri-close-line search__close" id="search-close"></i>
+      </div>
+
+      <!--==================== LOGIN ====================-->
+      <div class="login grid" id="login-content">
+         <form action="" class="login__form">
+            <h3 class="login__title">Log In</h3>
+
+            <div class="login__group">
+               <div>
+                  <label for="login-email" class="login__label">Email</label>
+                  <input type="email" placeholder="Write your email" id="login-email" class="login__input">
+               </div>
+
+               <div>
+                  <label for="login-pass" class="login__label">Password</label>
+                  <input type="password" placeholder="Enter your password" id="login-pass" class="login__input">
+               </div>
+            </div>
+            <div>
+                  <span class="login__signup">
+                     Belum Punya Akun?? <a href="#">Sign up</a>
+                  </span>
+
+                  <a href="#" class="login__forgot">
+                     Lupa Password Anda
+                  </a>
+
+                  <button type="submit" class="login__button button">Log In</button>
+            </div>
+         </form>
+
+         <i class="ri-close-line login__close" id="login-close"></i>
+      </div>
+
+      <!--==================== MAIN ====================-->
+      <main class="main">
+         <!--==================== HOME ====================-->
+         <section class="home__section" id="home__section">
+            <!--==================== MAIN ====================-->
+      <main class="main">
+         <!--==================== HOME ====================-->
+         <section class="home__section" id="home__section">
+            <style>
+                .home__section {
+                  position: relative; /* penting agar ::before mengikuti section */
+                  background-image: url('assets/img/bg-cart.jpeg');
+                  background-size: cover;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  min-height: 100vh;
+                  overflow: hidden;
+                }
+
+                .home__section::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.4); /* transparansi hitam */
+                    z-index: 1;
+                }
+
+                .home__data{
+                    position: relative; /* konten di atas overlay */
+                    z-index: 2;
+                    padding-top: 3rem; /* biar tidak nempel atas */
+                    
+                }
+
+                .aboutus__card{
+                    position: relative;
+                    z-index: 2;
+                }
+            </style>
+
+            <!--==================== KERANJANG ====================-->
+            <div class="keranjang__container container grid">
+               <div class="keranjang__data">
+                  <h1 class="keranjang__title">
+                  </h1>
+
+                  <a href="katalog.html" class="button"> </i> <i class="ri-corner-up-left-line"></i> Back</a>
+            </div>
+               <!--==================== PROFIL DETAIL ====================-->
+            <section class="profildetail__section">
+               <div class="profil-detail">
+                  <div class="profil-info">
+                     <h2 class="profil-title"><i class="ri-user-5-fill"></i> Profil Anggota</h2>
+
+                     <p>
+                     <strong>Nama</strong>: Lorem Ipsum
+                     </p>
+
+                     <p>
+                     <strong>Email</strong>: Email@mail.com
+                     </p>
+
+                     <p>
+                     <strong>No.Telp</strong>: 0811112222 
+                     </p>
+
+                     <p>
+                     <strong>Alamat</strong>: Jl. Asgard Kacamatan Alien
+                     </p>
+
+                     <p>
+                     <a href="#" class="edit__btn button">Ganti Password!?</a>
+                     </p>
+                  </div>
+                  <a href="#" class="edit__btn button">Edit Profil</a>
+               </div>
+            </section>
+
+            <!--==================== EDIT PROFIL FORM ====================-->
+
+            <div class="edit-container">
+               <h2>Edit Profil Anggota</h2>
+               <form action="proses-edit.php" method="post">
+                  <label for="nama">Nama</label>
+                  <input type="text" id="nama" name="nama" placeholder="Masukkan nama baru">
+
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" placeholder="Masukkan email baru">
+
+                  <label for="telp">No. Telepon</label>
+                  <input type="text" id="telp" name="telp" placeholder="Masukkan nomor telepon baru">
+
+                  <label for="alamat">Alamat</label>
+                  <input type="text" id="alamat" name="alamat" placeholder="Masukkan alamat baru">
+
+                  <button type="submit" class="btn-save">Simpan Perubahan</button>
+               </form>
+
+               <a href="profil.html" class="btn-back">← Kembali</a>
+            </div>
+
+            <!--==================== EDIT PASSWORD SAJA ====================-->
+
+            <div class="edit-container">
+               <h2>Ganti Password?</h2>
+               <form action="proses-edit.php" method="post">
+                  <label for="password">Password Baru</label>
+                  <input type="password" id="password" name="password" placeholder="Masukkan password baru">
+
+                  <button type="submit" class="btn-save">Simpan Password!</button>
+               </form>
+
+               <a href="profil.html" class="btn-back">← Kembali</a>
+            </div>
+
+         </section>
+      </section>
+
+      
+         
+
+      <!--==================== FOOTER ====================-->
+      <footer class="footer">
+         
+      </footer>
+
+      <!--========== SCROLL UP ==========-->
+      
+
+      <!--=============== SCROLLREVEAL ===============-->
+      <script src=""></script>
+
+      <!--=============== SWIPER JS ===============-->
+      <script src="assets/js/swiper-bundle.min.js"></script>
+
+      <!--=============== MAIN JS ===============-->
+      <script src="assets/js/main.js"></script>
+   </body>
+</html>
